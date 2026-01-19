@@ -2,7 +2,7 @@
   "id": "dispatch",
   "title": "Dispatch (Masks: A New Generation)",
   "description": "Unofficial Expansion for Masks: A New Generation based on the 2025 game Dispatch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "compatibility": {
     "minimum": 13,
     "verified": 13.351,
