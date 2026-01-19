@@ -1,7 +1,7 @@
 {
   "id": "dispatch",
-  "title": "Dispatch: Combat UI for Masks",
-  "description": "Turn Cards HUD, Call Sheets, and Resource Trackers for Masks: A New Generation",
+  "title": "Dispatch (Masks: A New Generation)",
+  "description": "Unofficial Expansion for Masks: A New Generation based on the 2025 game Dispatch",
   "version": "1.0.0",
   "compatibility": {
     "minimum": 13,
