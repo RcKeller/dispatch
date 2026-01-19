@@ -1,0 +1,32 @@
+{
+  "name": "dispatch",
+  "version": "1.0.0",
+  "description": "Combat UI for Masks: A New Generation - Turn Cards, Call Sheets, Resource Trackers",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "watch": "vite build --watch",
+    "dev": "vite build --watch",
+    "serve": "vite",
+    "pushLDBtoJSON": "node tools/pushLDBtoJSON.mjs",
+    "pullJSONtoLDB": "node tools/pullJSONtoLDB.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RcKeller/dispatch.git"
+  },
+  "author": "RcKeller",
+  "license": "MIT",
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/node": "^22.10.5",
+    "autoprefixer": "^10.4.20",
+    "fvtt-types": "github:League-of-Foundry-Developers/foundry-vtt-types#main",
+    "postcss": "^8.4.49",
+    "sass": "^1.83.1",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.7",
+    "vite-plugin-static-copy": "^2.2.0"
+  }
+}

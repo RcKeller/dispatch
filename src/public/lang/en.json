@@ -1,0 +1,58 @@
+{
+  "DISPATCH": {
+    "Settings": {
+      "MaxCooldown": {
+        "Name": "Max Cooldown Turns",
+        "Hint": "Maximum number of turns a character is on cooldown after taking an action"
+      },
+      "ShowCallsInTracker": {
+        "Name": "Show Calls in Combat Tracker",
+        "Hint": "Display Call actors in the combat tracker sidebar"
+      }
+    },
+    "TurnCards": {
+      "TeamPool": "Team Pool",
+      "SpendTeam": "Spend Team",
+      "AddTeam": "Add Team",
+      "ResetTeam": "Reset Team",
+      "GMAction": "GM/NPC Turn: Advance cooldowns",
+      "Action": "Action",
+      "Potential": "Potential",
+      "ShiftLabels": "Shift Labels",
+      "Forward": "Forward",
+      "Ongoing": "Ongoing",
+      "Ready": "Ready",
+      "Busy": "Busy",
+      "Downed": "Downed"
+    },
+    "Call": {
+      "CallerName": "Caller",
+      "Quote": "The Call",
+      "Dispatch": "Dispatch",
+      "SelectHero": "Select a Hero",
+      "Assessing": "Assessing...",
+      "ShowToEveryone": "Show",
+      "ShowToEveryoneTooltip": "Show this call to all players",
+      "FitGreat": "Great Fit",
+      "FitGood": "Good Fit",
+      "FitPoor": "Poor Fit",
+      "NoHeroAssigned": "No hero assigned",
+      "Types": {
+        "emergency": "Emergency",
+        "patrol": "Patrol",
+        "investigation": "Investigation",
+        "social": "Social",
+        "other": "Other"
+      }
+    },
+    "Trackers": {
+      "Doom": "Doom Track",
+      "BullsHeart": "Bull's Heart",
+      "Burn": "Burn",
+      "Drives": "Drives",
+      "Lessons": "Lessons",
+      "Roots": "Putting Down Roots",
+      "Gadgets": "Gadgets"
+    }
+  }
+}
