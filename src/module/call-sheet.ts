@@ -48,7 +48,7 @@ export type DispatchStatus = "idle" | "assessing" | "qualified";
  * Top section is visible to all players
  * Bottom section is GM/owner-only
  */
-export class CallSheet extends ActorSheet {
+export class CallSheet extends foundry.appv1.sheets.ActorSheet {
 	/** @override */
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
@@ -888,7 +888,7 @@ export function registerCallSheetSocketHandler(): void {
  * Register the CallSheet class
  */
 export function registerCallSheet(): void {
-	Actors.registerSheet(DISPATCH_NS, CallSheet, {
+	foundry.documents.collections.Actors.registerSheet(DISPATCH_NS, CallSheet, {
 		types: ["call"],
 		makeDefault: true,
 		label: "DISPATCH.Call.Sheet",

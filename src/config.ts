@@ -15,10 +15,15 @@ export const SOCKET_NS = `module.${MODULE_ID}`;
 /** Flag namespace for Dispatch-specific actor/document flags */
 export const FLAG_NS = MODULE_ID;
 
+/** Base path for module assets - 'dist/' prefix only needed in dev mode */
+const BASE_PATH = import.meta.env?.DEV
+	? `modules/${MODULE_ID}/dist`
+	: `modules/${MODULE_ID}`;
+
 /** Template paths */
 export const TEMPLATES = {
-	turnCards: `modules/${MODULE_ID}/dist/templates/turncards.hbs`,
-	callSheet: `modules/${MODULE_ID}/dist/templates/sheets/call-sheet.hbs`,
+	turnCards: `${BASE_PATH}/templates/turncards.hbs`,
+	callSheet: `${BASE_PATH}/templates/sheets/call-sheet.hbs`,
 } as const;
 
 /** Settings keys */

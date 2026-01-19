@@ -3,7 +3,7 @@
 // Handles: Team Pool, Cooldown System, Potential, Forward/Aid, Label Shifting, Playbook Resources
 /* global Hooks, game, ui, foundry, renderTemplate, ChatMessage, CONST, canvas, Dialog, CONFIG, Handlebars */
 
-import { MODULE_ID, MASKS_MODULE_ID, SOCKET_NS } from "../config";
+import { MODULE_ID, MASKS_MODULE_ID, SOCKET_NS, TEMPLATES } from "../config";
 import { HookRegistry } from "./helpers/hook-registry";
 import { createLabelsGraphData, saveGraphAnimationState, animateGraphFromSavedState } from "./labels-graph";
 
@@ -22,7 +22,7 @@ import {
 // Use masks module ID for shared data (team pool, flags)
 const NS = MASKS_MODULE_ID;
 const DISPATCH_NS = MODULE_ID;
-const TEMPLATE = `modules/${MODULE_ID}/dist/templates/turncards.hbs`;
+const TEMPLATE = TEMPLATES.turnCards;
 
 // Flags
 const FLAG_COOLDOWN = "turnCardsCooldownRemaining";
@@ -1402,7 +1402,7 @@ const TurnCardsHUD = {
 
 		this._saveLabelsGraphStates();
 
-		const html = await renderTemplate(TEMPLATE, context);
+		const html = await foundry.applications.handlebars.renderTemplate(TEMPLATE, context);
 		this.root.innerHTML = html;
 
 		this._applyCooldownBarAnimations();
