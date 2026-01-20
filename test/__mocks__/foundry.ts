@@ -79,6 +79,34 @@ export const mockRandomID = (length = 16): string => {
 };
 
 // ============================================================================
+// Mock Base Classes
+// ============================================================================
+
+class MockApplication {
+	static get defaultOptions() {
+		return {};
+	}
+	render() {}
+	close() {}
+}
+
+class MockActorSheet extends MockApplication {
+	actor: unknown = null;
+	static get defaultOptions() {
+		return {
+			classes: [],
+			template: "",
+			width: 400,
+			height: 400,
+		};
+	}
+	getData() {
+		return {};
+	}
+	activateListeners() {}
+}
+
+// ============================================================================
 // Mock foundry global
 // ============================================================================
 
@@ -88,8 +116,33 @@ export const mockFoundry = {
 		getProperty: mockGetProperty,
 		setProperty: mockSetProperty,
 		flattenObject: mockFlattenObject,
+		hasProperty: (obj: unknown, path: string): boolean => {
+			if (!obj || typeof obj !== "object") return false;
+			const parts = path.split(".");
+			let current: unknown = obj;
+			for (const part of parts) {
+				if (current === null || current === undefined) return false;
+				if (typeof current !== "object") return false;
+				if (!(part in (current as Record<string, unknown>))) return false;
+				current = (current as Record<string, unknown>)[part];
+			}
+			return true;
+		},
 		escapeHTML: mockEscapeHTML,
 		randomID: mockRandomID,
+		mergeObject: (original: object, other: object = {}) => ({ ...original, ...other }),
+	},
+	appv1: {
+		sheets: {
+			ActorSheet: MockActorSheet,
+		},
+	},
+	documents: {
+		collections: {
+			Actors: {
+				registerSheet: jest.fn(),
+			},
+		},
 	},
 };
 
