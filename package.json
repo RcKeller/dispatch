@@ -8,6 +8,8 @@
     "watch": "vite build --watch",
     "dev": "vite build --watch",
     "serve": "vite",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
     "pushLDBtoJSON": "node tools/pushLDBtoJSON.mjs",
     "pullJSONtoLDB": "node tools/pullJSONtoLDB.mjs"
   },
@@ -19,12 +21,16 @@
   "license": "MIT",
   "devDependencies": {
     "@tailwindcss/vite": "^4.0.0",
+    "@types/jest": "^30.0.0",
     "@types/node": "^22.10.5",
     "autoprefixer": "^10.4.20",
     "fvtt-types": "github:League-of-Foundry-Developers/foundry-vtt-types#main",
+    "jest": "^30.0.0",
     "postcss": "^8.4.49",
     "sass": "^1.83.1",
     "tailwindcss": "^4.0.0",
+    "ts-jest": "^29.4.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5.7.2",
     "vite": "^6.0.7",
     "vite-plugin-static-copy": "^2.2.0"
